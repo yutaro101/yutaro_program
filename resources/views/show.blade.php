@@ -9,13 +9,15 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+       
         <h1 class="title">
             {{ $post->title }}
         </h1>
-        <div class="content">
+        <div class="post">
             <div class="content__post">
-                <h3>本文</h3>
-                <p>{{ $post->body }}</p>    
+                <h2 class='title'>{{$post->title}}</h2>
+                <p class='body'>{{ $post->body }}</p> 
+                <p class='updated_at'>{{ $post->updated_at }}</p> 
             </div>
         </div>
         <div class="footer">

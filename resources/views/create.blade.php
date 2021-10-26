@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/app.css">
     </head>
+    <body>
    <h1>Blog Name</h1>
         <form action="/posts" method="POST">
             @csrf
