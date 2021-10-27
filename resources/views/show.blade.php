@@ -10,6 +10,7 @@
     </head>
     <body>
        <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
+     
         <h1 class="title">
             {{ $post->title }}
         </h1>
@@ -20,8 +21,17 @@
                 <p class='updated_at'>{{ $post->updated_at }}</p> 
             </div>
         </div>
+        
+        
         <div class="footer">
             <a href="/">back</a>
+              <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post" style="display:inline">
+         @csrf
+         @method('DELETE')
+        <button type="submit">delete</button> 
+        </form>
+        
         </div>
+      
     </body>
 </html>
